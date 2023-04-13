@@ -69,6 +69,24 @@ public class MainActivity extends AppCompatActivity {
                 web_text.setText(s);
             }
         });
+        EditText four = findViewById(R.id.editTextTextPersonName4);
+        EditText three = findViewById(R.id.editTextTextPersonName3);
+        three.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                four.setText(three.getText());
+            }
+        });
 
         RadioGroup gr = findViewById(R.id.radiogroup);
         System.out.println(gr.getCheckedRadioButtonId());
